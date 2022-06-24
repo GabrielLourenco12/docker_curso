@@ -6,7 +6,7 @@ services:
     volumes:
       - db_data:/var/lib/mysql
     restart: always
-    env_file:
+    env_file: #Recupera os dados de ambiente do arquivo .env
       - ./config/db.env
 
   wordpress:
