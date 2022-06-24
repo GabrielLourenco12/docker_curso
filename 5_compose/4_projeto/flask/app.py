@@ -1,7 +1,6 @@
 import flask
 from flask import request, json, jsonify
 import requests
-import flask_mysqldb
 from flask_mysqldb import MySQL
 
 app = flask.Flask(__name__)
