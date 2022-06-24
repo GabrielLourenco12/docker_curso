@@ -8,7 +8,7 @@ services:
     restart: always
     env_file:
       - ./config/db.env
-    networks:
+    networks: # Rede de acesso ao container
       - backend
 
   wordpress:
@@ -23,8 +23,8 @@ services:
     networks:
       - backend
 
-volumes:
+volumes: # Define o volume de dados
   db_data: {}
-networks:
+networks: # Definindo a rede de acesso ao container
   backend:
     driver: bridge
