@@ -2,18 +2,19 @@ version: '3.3'
 
 services:
   db: # Container de MySQL
+    # Configurações do container
     image: mysql:5.7 # FROM mysql:5.7
     volumes:
       - db_data:/var/lib/mysql
-    restart: always
+    restart: always #Toda alteração no container será reiniciado
     environment:
       MYSQL_ROOT_PASSWORD: wordpress
       MYSQL_DATABASE: wordpress
-      MYSQL_USER: matheus
+      MYSQL_USER: admin
       MYSQL_PASSWORD: secret
 
-  wordpress:
-    depends_on: 
+  wordpress: # Container do Wordpress
+    depends_on: # Executa o container db antes do wordpress
       - db
     image: wordpress:latest
     ports:
@@ -21,7 +22,7 @@ services:
     restart: always
     environment: 
       WORDPRESS_DB_HOST: db:3306
-      WORDPRESS_DB_USER: matheus
+      WORDPRESS_DB_USER: admin
       WORDPRESS_DB_PASSWORD: secret
       WORDPRESS_DB_NAME: wordpress
 volumes:
