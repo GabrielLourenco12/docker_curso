@@ -14,4 +14,4 @@ spec:
     spec:
       containers:
         - name: flask
-          image: gabriellourenco/flask-projeto-k8s:2
+          image: gabriellourenco/flask-projeto-k8s:3
