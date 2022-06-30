@@ -28,4 +28,4 @@ spec:
     spec:
       containers:
         - name: flask
-          image: matheusbattisti/flask-kub-projeto:5
+          image: gabriellourenco/flask-projeto-k8s:3
