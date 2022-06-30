@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: flask-app-depoyment
+  name: flask-app-deployment
 spec:
   replicas: 4
   selector:
@@ -14,4 +14,4 @@ spec:
     spec:
       containers:
         - name: flask
-          image: matheusbattisti/flask-kub-projeto:5
+          image: gabriellourenco/flask-projeto-k8s:2
